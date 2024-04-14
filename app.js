@@ -36,14 +36,14 @@ app.get("/.well-known/assetlinks.json", (req, res) => {
     ])
 })
 
-app.use(function (err, req, res, next) {
-    res.status(422).send({ error: err.message });
-});
+// app.use(function (err, req, res, next) {
+//     res.status(422).send({ error: err.message });
+// });
 
 
-app.get('*', function (req, res) {
-    res.send('Sorry, this is an invalid URL.');
-});
+// app.get('*', function (req, res) {
+//     res.send('Sorry, this is an invalid URL.');
+// });
 
 app.listen(process.env.PORT || 3000, function () {
     console.log('Express app running on port ' + (process.env.PORT || 3000))
